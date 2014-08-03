@@ -23,8 +23,8 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath 'au.org.trogdor.xamarin-gradle-plugins:xamarin-build-plugin:0.1'
-        classpath 'au.org.trogdor.xamarin-gradle-plugins:xamarin-publish-plugin:0.1'
+        classpath 'au.org.trogdor.xamarin-gradle-plugins:xamarin-build-plugin:0.1-iHomeAutomate'
+        classpath 'au.org.trogdor.xamarin-gradle-plugins:xamarin-publish-plugin:0.1-iHomeAutomate'
     }
 }
 
