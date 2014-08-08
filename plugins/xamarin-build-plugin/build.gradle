@@ -1,2 +1,18 @@
 version = '0.1-iHomeAutomate'
 ext.artifactId = 'xamarin-build-plugin'
+
+task sourceJar(type: Jar) {
+    from sourceSets.main.allSource
+}
+
+publishing {
+    publications {
+        mavenStuff(MavenPublication) {
+            from components.java
+
+            artifact sourceJar {
+                classifier "sources"
+            }
+        }
+    }
+}

@@ -7,23 +7,4 @@ subprojects {
 	    compile project(':lib')
 	}
 
-	apply plugin: 'maven'
-
-	configurations {
-		includeInJar
-	}
-
-	jar {
-
-	}
-	
-	afterEvaluate {
-		install {
-		    repositories.mavenInstaller {
-		        pom.version = project.version
-		        pom.groupId = project.group
-		        pom.artifactId = project.ext.artifactId
-		    }
-		}
-	}
 }
