@@ -20,7 +20,7 @@ Apply the plugins like such:
 ```groovy
 buildscript {
     repositories {
-        mavenLocal()
+        jcenter()
     }
     dependencies {
         classpath 'au.org.trogdor.xamarin-gradle-plugins:xamarin-build-plugin:0.1-iHomeAutomate'
