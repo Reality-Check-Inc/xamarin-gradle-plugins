@@ -34,8 +34,8 @@ allprojects {
             attributes= ['More info': 'http://www.ihomeautomate.eu']
 
             version {
-                name = '0.1-iHomeAutomate'
-                vcsTag = '0.1-iHomeAutomate'
+                name = '0.1.1-iHomeAutomate'
+                vcsTag = '0.1.1-iHomeAutomate'
                 attributes = ['More info': 'http://www.ihomeautomate.eu']
             }
         }
