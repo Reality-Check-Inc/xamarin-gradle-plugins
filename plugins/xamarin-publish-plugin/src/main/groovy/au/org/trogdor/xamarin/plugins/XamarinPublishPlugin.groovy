@@ -4,8 +4,11 @@ import au.org.trogdor.xamarin.lib.XamarinProject
 import org.gradle.api.Action
 import org.gradle.api.Project
 import org.gradle.api.Plugin
+import org.gradle.api.XmlProvider
+import org.gradle.api.internal.UserCodeAction
 import org.gradle.api.internal.project.ProjectInternal
 import org.gradle.api.publish.maven.MavenPublication
+import org.gradle.listener.ActionBroadcast
 
 class XamarinPublishPlugin implements Plugin<Project> {
 	void apply(Project project) {
@@ -19,6 +22,8 @@ class XamarinPublishPlugin implements Plugin<Project> {
 
                 MavenPublication publication = projectInternal.publishing.publications.create('xamarin', MavenPublication)
                 publication.artifactId = resolvedArtifactId
+                publication.pom.withXml(projectInternal.xamarinPublish.getXmlAction())
+
                 xamarinProject.configurations.all {configuration->
                     addArtifacts(configuration, publication, projectInternal)
                 }
@@ -26,7 +31,7 @@ class XamarinPublishPlugin implements Plugin<Project> {
                 projectInternal.tasks.publish.dependsOn('buildAll')
             }
 
-            private void addArtifacts(configuration, publication, projectInternal) {
+            private void addArtifacts(configuration, MavenPublication publication, ProjectInternal projectInternal) {
                 def classifierName = configuration.name.toLowerCase()
                 configuration.resolvedBuildOutput.with {
                     if (projectInternal.file(it).exists())
@@ -51,6 +56,8 @@ class XamarinPublishExtension {
     final def Project project
     private def String mArtifactId
 
+    private final ActionBroadcast<XmlProvider> xmlAction = new ActionBroadcast<XmlProvider>();
+
     XamarinPublishExtension(Project project) {
         this.project = project
     }
@@ -61,5 +68,13 @@ class XamarinPublishExtension {
 
     String getArtifactId() {
         mArtifactId
+    }
+
+    public void withPomXml(Action<? super XmlProvider> action) {
+        xmlAction.add(new UserCodeAction<XmlProvider>("Could not apply withXml() to generated POM", action));
+    }
+
+    public Action<XmlProvider> getXmlAction() {
+        return xmlAction;
     }
 }
