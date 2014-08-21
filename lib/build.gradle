@@ -1,4 +1,3 @@
-version = '0.1.1-iHomeAutomate'
 ext.artifactId = 'lib'
 
 apply plugin: 'groovy'

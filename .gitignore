@@ -5,3 +5,7 @@ build/
 bin/
 obj/
 .userprefs
+out
+*.iml
+*.ipr
+*.iws

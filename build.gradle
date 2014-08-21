@@ -8,8 +8,6 @@ buildscript {
 }
 
 allprojects {
-	group = 'au.org.trogdor.xamarin-gradle-plugins'
-
     apply plugin: 'maven-publish'
     apply plugin: 'com.jfrog.bintray'
 
