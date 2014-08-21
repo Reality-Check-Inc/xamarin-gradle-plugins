@@ -1,0 +1,14 @@
+language: groovy
+
+script: ./gradlew -PbuildInfo.build.number=$TRAVIS_BUILD_NUMBER -PbuildInfo.buildUrl=https://travis-ci.org/${TRAVIS_REPO_SLUG}/builds/${TRAVIS_JOB_ID} -PbuildInfo.buildAgent.name=$USER -PbuildInfo.principal=$USER clean build
+
+jdk:
+  - oraclejdk7
+
+env:
+  global:
+  - TERM=dumb
+  # bintray user
+  - secure: "CgYerzz29ZkJ/H7lKaGMxgGUNn3PhAeqhQ+5JTqHB1x80fCSDvqfGcwUNNsSCqT0oUJhbqW6Jz/zUd1nfwGyo2h1UqIo1N+9pML5DSus7SSgRrHBNyQxGFkAZLT9TNod4fmL6Kzy9if5zCELGaREASOd0D3z/6qCnt4TLJDhASs="
+  # bintray key
+  - secure: "NIqetZ6TbtLBVlAY5QwhJcyAJf2kUaP9uoG8EeK0mHNYtnlLZEi1XWwFhJgabxeNUkrgJbgMmGeisESC0+YCZ93QjGoZDueDFdBh+poZapHhSeDqce8Igs0fvdjsIeSqRKGoDLQcosr38vo/TSq+xTRlC+y30/T6QHzxkyr220g="
