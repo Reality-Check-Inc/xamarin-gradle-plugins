@@ -1,0 +1,50 @@
+// configuration of the Maven artifacts
+apply plugin: 'maven-publish'
+
+// add javadoc/source jar tasks as artifacts
+artifacts {
+    archives sourcesJar, javadocJar
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+
+            artifact sourcesJar {
+                classifier "sources"
+            }
+
+            artifact javadocJar {
+                classifier "javadoc"
+            }
+
+            pom.withXml {
+                def Node root = asNode()
+                root.appendNode('name', 'Gradle Xamarin Plugin')
+                root.appendNode('description', 'Gradle Xamarin Plugin')
+                root.appendNode('url', project.project_url)
+
+                def issues = root.appendNode( 'issueManagement' )
+                issues.appendNode( 'system', 'github' )
+                issues.appendNode( 'url', project.project_issues_url )
+
+                def scm = root.appendNode( 'scm' )
+                scm.appendNode( 'url', project.project_scm )
+                scm.appendNode( 'connection', project.project_connection)
+                scm.appendNode( 'developerConnection', project.project_dev_connection )
+
+                def license = root.appendNode( 'licenses' ).appendNode( 'license' );
+                license.appendNode( 'name', 'The Apache Software License, Version 2.0' )
+                license.appendNode( 'url', 'http://www.apache.org/licenses/LICENSE-2.0.txt' )
+                license.appendNode( 'distribution', 'repo' )
+
+                def dev = root.appendNode( 'developers' ).appendNode( 'developer' );
+                dev.appendNode( 'id', project.project_vendor )
+                dev.appendNode( 'name', project.project_vendor_name )
+                dev.appendNode( 'organization', 'iHomeAutomate' )
+                dev.appendNode( 'organizationUrl', 'http://www.iHomeAutomate.eu' )
+            }
+        }
+    }
+}

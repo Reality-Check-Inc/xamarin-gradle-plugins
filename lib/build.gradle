@@ -1,24 +1,9 @@
-ext.artifactId = 'lib'
+apply from: rootProject.file('gradle/publishing.gradle')
+apply from: rootProject.file('gradle/bintray.gradle')
 
-apply plugin: 'groovy'
+ext.artifactId = 'lib'
 
 dependencies {
     compile gradleApi()
     compile localGroovy()
-}
-
-task sourceJar(type: Jar) {
-    from sourceSets.main.allSource
-}
-
-publishing {
-    publications {
-        mavenStuff(MavenPublication) {
-            from components.java
-
-            artifact sourceJar {
-                classifier "sources"
-            }
-        }
-    }
 }

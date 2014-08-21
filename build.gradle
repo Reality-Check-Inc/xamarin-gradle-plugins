@@ -4,38 +4,11 @@ buildscript {
     }
     dependencies {
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:0.5'
+        classpath 'org.jfrog.buildinfo:build-info-extractor-gradle:3.0.1'
     }
 }
 
 allprojects {
-    apply plugin: 'maven-publish'
-    apply plugin: 'com.jfrog.bintray'
-
-    bintray {
-        user = bintrayUser
-        key = bintrayKey
-
-        publications = ['mavenStuff']
-
-        dryRun = false
-        publish = false
-        pkg {
-            repo = 'Gradle-Plugins'
-            name = 'xamarin-gradle-plugins'
-            desc = 'Plugins to build xamarin apps using gradle'
-            websiteUrl = 'https://github.com/ihomeautomate/xamarin-gradle-plugins'
-            issueTrackerUrl = 'https://github.com/ihomeautomate/xamarin-gradle-plugins/issues'
-            vcsUrl = 'https://github.com/ihomeautomate/xamarin-gradle-plugins.git'
-            licenses = ['Apache-2.0']
-            labels = ['C#', 'Mono', 'Xamarin', 'Gradle']
-            publicDownloadNumbers = false
-            attributes= ['More info': 'http://www.ihomeautomate.eu']
-
-            version {
-                name = '0.1.1-iHomeAutomate'
-                vcsTag = '0.1.1-iHomeAutomate'
-                attributes = ['More info': 'http://www.ihomeautomate.eu']
-            }
-        }
-    }
+    apply from: rootProject.file('gradle/compile.gradle')
+    apply from: rootProject.file('gradle/credentials.gradle')
 }
