@@ -1,5 +1,6 @@
 apply from: rootProject.file('gradle/publishing.gradle')
 apply from: rootProject.file('gradle/bintray.gradle')
+apply from: rootProject.file('gradle/artifactory.gradle')
 
 ext.artifactId = 'lib'
 
