@@ -9,6 +9,6 @@ env:
   global:
   - TERM=dumb
   # bintray user
-  - secure: "CgYerzz29ZkJ/H7lKaGMxgGUNn3PhAeqhQ+5JTqHB1x80fCSDvqfGcwUNNsSCqT0oUJhbqW6Jz/zUd1nfwGyo2h1UqIo1N+9pML5DSus7SSgRrHBNyQxGFkAZLT9TNod4fmL6Kzy9if5zCELGaREASOd0D3z/6qCnt4TLJDhASs="
+  - secure: "RyFV39ASbeBS3mTAP4ZCP09YlSHSP6yXNZA6BHsPsGFxCCQuxITxWQpxPo5WZrLMpzQkeFLLK5PIvqV717aoD/RnBxOyOiy4h9b2qzxATLmrPkZ+uUQstu1CdWJ8Qyirk92GAmnG8JmonuCaWDg3YCTPPmChfFNS84hV/7QI330="
   # bintray key
-  - secure: "NIqetZ6TbtLBVlAY5QwhJcyAJf2kUaP9uoG8EeK0mHNYtnlLZEi1XWwFhJgabxeNUkrgJbgMmGeisESC0+YCZ93QjGoZDueDFdBh+poZapHhSeDqce8Igs0fvdjsIeSqRKGoDLQcosr38vo/TSq+xTRlC+y30/T6QHzxkyr220g="
+  - secure: "ARvYEbniOAyDuNpgE6PAaeuJAOvW9aFEKtsWxr9kjfs/8HDYxgR/ilZYnc/OIGVumHzBg4boRvPfSiCSAzOeHY0GwkhDvfA/G6bm9hXs+vFcYYUVDp8izLepHCrtA5cJUvHx61CIGzjVGZF2y8nk1aiSuIhKEQDvcsr7BzvGWoo="
