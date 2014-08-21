@@ -12,3 +12,7 @@ allprojects {
     apply from: rootProject.file('gradle/compile.gradle')
     apply from: rootProject.file('gradle/credentials.gradle')
 }
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
