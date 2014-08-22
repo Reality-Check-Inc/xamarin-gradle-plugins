@@ -6,6 +6,6 @@ subprojects {
 	dependencies {
 	    compile gradleApi()
 	    compile localGroovy()
-	    compile project(':lib')
+	    compile project(':gradle-xamarin-plugins-lib')
 	}
 }

@@ -1,8 +1,9 @@
-apply plugin: 'xamarin-build-plugin'
+apply plugin: 'eu.ihomeautomate.gradle.xamarin-build'
 
 xamarin {
 	androidAppProject {
-		projectName 'AndroidApp'
+        projectName 'AndroidApp'
+        projectFile 'AndroidApp.csproj'
 		configurations {
 			Debug
 			Release

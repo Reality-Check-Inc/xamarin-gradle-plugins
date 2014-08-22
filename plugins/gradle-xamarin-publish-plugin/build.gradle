@@ -1,0 +1,5 @@
+ext.artifactId = 'gradle-xamarin-publish-plugin'
+
+dependencies {
+	compile project(':plugins:gradle-xamarin-build-plugin')
+}

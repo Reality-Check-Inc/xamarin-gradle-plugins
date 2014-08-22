@@ -1,5 +1,0 @@
-ext.artifactId = 'xamarin-publish-plugin'
-
-dependencies {
-	compile project(':plugins:xamarin-build-plugin')
-}

@@ -1,8 +1,9 @@
-apply plugin: 'xamarin-build-plugin'
+apply plugin: 'eu.ihomeautomate.gradle.xamarin-build'
 
 xamarin {
 	iOSLibraryProject {
 		projectName 'iOSLibrary'
+        projectFile 'iOSLibrary.csproj'
 		solutionFile '../example.sln'
 		configurations {
 			Debug

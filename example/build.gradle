@@ -5,8 +5,8 @@ subprojects {
 		}
 
 		dependencies {
-	        classpath 'au.org.trogdor.xamarin-gradle-plugins:xamarin-build-plugin:+'
-	        classpath 'au.org.trogdor.xamarin-gradle-plugins:xamarin-publish-plugin:+'
+	        classpath 'eu.ihomeautomate.gradle:gradle-xamarin-build-plugin:+'
+	        classpath 'eu.ihomeautomate.gradle:gradle-xamarin-publish-plugin:+'
 		}
 	}
 
