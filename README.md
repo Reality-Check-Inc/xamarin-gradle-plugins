@@ -12,8 +12,7 @@ Using these plugins in tandem will allow you to integrate Maven dependency manag
 
 The plugins can be installed into the local maven repository with "gradle install"
 
-Applying the plugins
-------------------------------
+## Applying the plugins
 Apply the plugins like such:
 
     buildscript {
@@ -29,8 +28,7 @@ Apply the plugins like such:
     apply plugin: 'eu.ihomeautomate.gradle.xamarin-build'
     apply plugin: 'eu.ihomeautomate.gradle.xamarin-publish'
 
-Using the build plugin
-------------------------------
+## Using the build plugin
 This plugin must be configured with enough information to invoke the xamarin build tools against your project's .csproj/.sln files in the correct build configuration.
 All configuration for the build plugin is done under the 'xamarin' project extension.
 
@@ -43,8 +41,7 @@ A project block must be specified in the xamarin closure. Available project type
 - genericLibraryProject
 
 
-Customising tool paths
-------------------------------
+## Customising tool paths
 The block can optionally be configured with xbuildPath and mdtoolpath.
 These default to 'xbuild' and '/Applications/Xamarin Studio.app/Contents/MacOS/mdtool' respectively, and will suit standard Xamarin installs.
 
@@ -58,8 +55,7 @@ These default to 'xbuild' and '/Applications/Xamarin Studio.app/Contents/MacOS/m
         }
     }
 
-Dependencies
-------------------------------
+## Dependencies
 The 'references' configuration is added by the build plugin. DLL's which have been packaged as maven artifacts can be used here,
 and will be copied into a 'dependencies' (by default) folder with the 'installDependencies\<configuration\>' task, which also runs before build steps.
 
@@ -92,8 +88,7 @@ Debug symbols (.dll.mdb) get pushed to maven under the debug-symbols classifier,
 *Tasks:*
 - installDependencies\<configuration\>
 
-Android Projects
-------------------------------
+## Android Projects
 Android projects come in two flavors:
 - androidAppProject - For Xamarin Android Application projects. Builds an apk file from the project
 - androidLibraryProject - For Xamarin Android Library projects. Builds a dll file
@@ -152,8 +147,7 @@ dependencyDir can also be specified, and will define where downloaded dependenci
         }
     }
 
-iOS Projects
---------------------------
+## iOS Projects
 iOS projects similarly come in two flavors:
 - iOSAppProject: For Xamarin iOS Application projects
 - iOSLibraryProject: For Xamarin iOS Library projects
@@ -187,16 +181,14 @@ A typical Xamarin iOS library project will be configured like so:
 This is very similar to android projects, however instead of just project name, the solution file is required to be provided for mdtool to be able to build the project and its project dependencies.
 For app projects, an ipa will be built if specified in the Xamarin project settings for the built configuration.
 
-Generic Projects
---------------------------
+## Generic Projects
 Similarly, there are configurations for standard Xamarin/Mono projects:
 - genericAppProject
 - genericLibraryProject
 
 Configuration follows the same pattern as Android and iOS projects
 
-Using the publishing plugin
----------------------------
+## Using the publishing plugin
 The publishing plugin leverages the maven-publish plugin, adding a maven publishing configuration for the project.
 Under this maven configuration, the output dll for each configuration will be added as an artifact, with artifactId equal to to the projectName by default, and other parameters (group, version) pulled from the project properties. The configuration name will be used as the classifier
 If the mdb debug file exists in the specified configuration, it will be published with the 'debug-symbols' classifier. 
@@ -224,3 +216,48 @@ However, the artifactId can be overridden. By default it is derived from the pro
 	    artifactId 'CustomArtifact'
     }
 
+## Copyright and licensing
+    
+Code and documentation copyright 2014 [iHomeAutomate](http://www.iHomeAutomate.eu), forked from [cfraz89/xamarin-gradle-plugins](https://github.com/cfraz89/xamarin-gradle-plugins). Code released under the [Apache-2.0 license](LICENSE.txt).
+    
+## Social media
+
+<!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
+
+[![@ihomeautomate][1.1]][1]
+[![iHomeAutomate @ Facebook][2.1]][2]
+[![+IhomeautomateEu][3.1]][3]
+[![github.com/ihomeautomate][6.1]][6]
+
+<!-- links to social media icons -->
+<!-- no need to change these -->
+
+<!-- icons with padding -->
+
+[1.1]: http://i.imgur.com/tXSoThF.png (@ihomeautomate)
+[2.1]: http://i.imgur.com/P3YfQoD.png (iHomeAutomate facebook page)
+[3.1]: http://i.imgur.com/yCsTjba.png (+iHomeAutomateEu)
+[4.1]: http://i.imgur.com/YckIOms.png (tumblr icon with padding)
+[5.1]: http://i.imgur.com/1AGmwO3.png (dribbble icon with padding)
+[6.1]: http://i.imgur.com/0o48UoR.png (github.com/ihomeautomate)
+
+<!-- icons without padding -->
+
+[1.2]: http://i.imgur.com/wWzX9uB.png (twitter icon without padding)
+[2.2]: http://i.imgur.com/fep1WsG.png (facebook icon without padding)
+[3.2]: http://i.imgur.com/VlgBKQ9.png (google plus icon without padding)
+[4.2]: http://i.imgur.com/jDRp47c.png (tumblr icon without padding)
+[5.2]: http://i.imgur.com/Vvy3Kru.png (dribbble icon without padding)
+[6.2]: http://i.imgur.com/9I6NRUm.png (github icon without padding)
+
+
+<!-- links to your social media accounts -->
+<!-- update these accordingly -->
+
+[1]: http://twitter.com/ihomeautomate
+[2]: https://facebook.com/pages/iHomeAutomate/218034961586842
+[3]: https://plus.google.com/+IhomeautomateEu
+[6]: http://github.com/ihomeautomate
+[7]: https://github.com/pledbrook/lazybones/wiki/Template-developers-guide
+
+<!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial --> 
