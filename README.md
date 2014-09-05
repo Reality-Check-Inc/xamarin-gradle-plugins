@@ -55,6 +55,16 @@ These default to 'xbuild' and '/Applications/Xamarin Studio.app/Contents/MacOS/m
         }
     }
 
+## Customising tool paths (Windows)
+We've successfully tested compilation with the build plugin when installing [mono for Windows](http://www.mono-project.com/download/#download-win). 
+Customise `xbuildPath` pointing to `xbuild.bat` in the bin folder of your installed mono version.
+
+*Example:*
+
+    xamarin {
+        xbuildPath ﻿'C:/Program Files (x86)/Mono-3.2.3/bin/xbuild.bat'        
+    }
+
 ## Dependencies
 The 'references' configuration is added by the build plugin. DLL's which have been packaged as maven artifacts can be used here,
 and will be copied into a 'dependencies' (by default) folder with the 'installDependencies\<configuration\>' task, which also runs before build steps.
