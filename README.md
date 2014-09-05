@@ -72,7 +72,7 @@ and will be copied into a 'dependencies' (by default) folder with the 'installDe
 The 'referencesMatched' configuration may also be used, which will use the correct maven classifier for your compiled configuration.
 This is useful when used for library published with the xamarin-publishing-plugin, which published all configurations of a dll under classifiers named after the configuration.
 
-You can use 'xamarin.referenceProject(projectPath)' to form a transitive dependency link to another gradle xamarin projecct, and all the dependent project's dependency dlls will be installed into this project.
+You can use 'xamarin.referenceProject(projectPath)' to form a transitive dependency link to another gradle xamarin project, and all the dependent project's dependency dlls will be installed into this project.
 
 *Example:*
 
