@@ -228,7 +228,7 @@ However, the artifactId can be overridden. By default it is derived from the pro
 
 ## Copyright and licensing
     
-Code and documentation copyright 2014 [iHomeAutomate](http://www.iHomeAutomate.eu), forked from [cfraz89/xamarin-gradle-plugins](https://github.com/cfraz89/xamarin-gradle-plugins). Code released under the [Apache-2.0 license](LICENSE.txt).
+Code and documentation copyright 2014-2015 [iHomeAutomate](http://www.iHomeAutomate.com), forked from [cfraz89/xamarin-gradle-plugins](https://github.com/cfraz89/xamarin-gradle-plugins). Code released under the [Apache-2.0 license](LICENSE.txt).
     
 ## Social media
 
