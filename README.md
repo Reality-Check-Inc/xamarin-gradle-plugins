@@ -1,6 +1,9 @@
 xamarin-gradle-plugins
 ======================
 
+[![Build Status](https://travis-ci.org/ihomeautomate/xamarin-gradle-plugins.png?branch=master)](https://travis-ci.org/ihomeautomate/xamarin-gradle-plugins)
+[![Maintainer Status](http://stillmaintained.com/ihomeautomate/xamarin-gradle-plugins.png)](http://stillmaintained.com/ihomeautomate/xamarin-gradle-plugins)
+
 Plugins to integrate Xamarin mobile apps into gradle and maven, forked from [cfraz89/xamarin-gradle-plugins](https://github.com/cfraz89/xamarin-gradle-plugins).
 
 - xamarin-build: Allows you to build existing Xamarin.Android (compile and apk), Xamarin.iOS, and vanilla Xamarin projects by invoking builds against the .csproj/.sln files.
