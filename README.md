@@ -3,6 +3,7 @@ xamarin-gradle-plugins
 
 [![Build Status](https://travis-ci.org/ihomeautomate/xamarin-gradle-plugins.png?branch=master)](https://travis-ci.org/ihomeautomate/xamarin-gradle-plugins)
 [![Maintainer Status](http://stillmaintained.com/ihomeautomate/xamarin-gradle-plugins.png)](http://stillmaintained.com/ihomeautomate/xamarin-gradle-plugins)
+[![Download](https://api.bintray.com/packages/ihomeautomate/Gradle-Plugins/xamarin-gradle-plugins/images/download.svg) ](https://bintray.com/ihomeautomate/Gradle-Plugins/xamarin-gradle-plugins/_latestVersion)
 
 Plugins to integrate Xamarin mobile apps into gradle and maven, forked from [cfraz89/xamarin-gradle-plugins](https://github.com/cfraz89/xamarin-gradle-plugins).
 
