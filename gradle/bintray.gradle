@@ -18,16 +18,16 @@ bintray {
         desc = 'Plugins to build xamarin apps using gradle'
         websiteUrl = attr 'project_url'
         issueTrackerUrl = attr 'project_issues_url'
-        vcsUrl = 'https://github.com/ihomeautomate/xamarin-gradle-plugins.git'
+        vcsUrl = 'https://github.com/Reality-Check-Inc/xamarin-gradle-plugins.git'
         licenses = ['Apache-2.0']
         labels = ['C#', 'Mono', 'Xamarin', 'Gradle']
         publicDownloadNumbers = false
-        attributes= ['More info': 'http://www.ihomeautomate.com']
+        attributes= ['More info': 'http://www.reality.cm']
 
         version {
             name = attr 'version'
             vcsTag = attr 'version'
-            attributes = ['More info': 'http://www.ihomeautomate.com']
+            attributes = ['More info': 'http://www.reality.cm']
         }
     }
 }

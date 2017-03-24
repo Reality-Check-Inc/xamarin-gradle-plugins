@@ -13,7 +13,7 @@ artifactory {
         }
         defaults {
             publications ('mavenJava')
-            properties = ['moreinfo': 'http://www.iHomeAutomate.com']
+            properties = ['moreinfo': 'http://www.reality.cm']
         }
     }
     resolve {
