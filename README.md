@@ -1,11 +1,9 @@
 xamarin-gradle-plugins
 ======================
 
-[![Build Status](https://travis-ci.org/ihomeautomate/xamarin-gradle-plugins.png?branch=master)](https://travis-ci.org/ihomeautomate/xamarin-gradle-plugins)
-[![Maintainer Status](http://stillmaintained.com/ihomeautomate/xamarin-gradle-plugins.png)](http://stillmaintained.com/ihomeautomate/xamarin-gradle-plugins)
-[![Download](https://api.bintray.com/packages/ihomeautomate/Gradle-Plugins/xamarin-gradle-plugins/images/download.svg) ](https://bintray.com/ihomeautomate/Gradle-Plugins/xamarin-gradle-plugins/_latestVersion)
+[![Build Status](https://travis-ci.org/Reality-Check-Inc/xamarin-gradle-plugins.png?branch=master)](https://travis-ci.org/Reality-Check-Inc/xamarin-gradle-plugins)
 
-Plugins to integrate Xamarin mobile apps into gradle and maven, forked from [cfraz89/xamarin-gradle-plugins](https://github.com/cfraz89/xamarin-gradle-plugins).
+Plugins to integrate Xamarin mobile apps into gradle and maven, forked from [ihomeautomate/xamarin-gradle-plugins](https://github.com/ihomeautomate/xamarin-gradle-plugins).
 
 - xamarin-build: Allows you to build existing Xamarin.Android (compile and apk), Xamarin.iOS, and vanilla Xamarin projects by invoking builds against the .csproj/.sln files.
   Provides support for fetching dependencies under the 'references' configuration.
@@ -232,32 +230,28 @@ However, the artifactId can be overridden. By default it is derived from the pro
 
 ## Copyright and licensing
     
-Code and documentation copyright 2014-2015 [iHomeAutomate](http://www.iHomeAutomate.com), forked from [cfraz89/xamarin-gradle-plugins](https://github.com/cfraz89/xamarin-gradle-plugins). Code released under the [Apache-2.0 license](LICENSE.txt).
+Code and documentation copyright 2017 [Reality Check, Inc.](http://www.reality.cm), forked from [ihomeautomate/xamarin-gradle-plugins](https://github.com/ihomeautomate/xamarin-gradle-plugins). Code released under the [Apache-2.0 license](LICENSE.txt).
     
 ## Social media
 
 <!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
 
-[![@ihomeautomate][1.1]][1]
-[![iHomeAutomate @ Facebook][2.1]][2]
-[![+IhomeautomateEu][3.1]][3]
-[![github.com/ihomeautomate][6.1]][6]
+[![Reality Check, Inc @ Facebook][2.1]][2]
+[![github.com/Reality-Check-Inc][6.1]][6]
 
 <!-- links to social media icons -->
 <!-- no need to change these -->
 
 <!-- icons with padding -->
 
-[1.1]: http://i.imgur.com/tXSoThF.png (@ihomeautomate)
-[2.1]: http://i.imgur.com/P3YfQoD.png (iHomeAutomate facebook page)
-[3.1]: http://i.imgur.com/yCsTjba.png (+iHomeAutomateEu)
+[2.1]: http://i.imgur.com/P3YfQoD.png (Reality-Check-Inc)
+[3.1]: http://i.imgur.com/yCsTjba.png (+google)
 [4.1]: http://i.imgur.com/YckIOms.png (tumblr icon with padding)
 [5.1]: http://i.imgur.com/1AGmwO3.png (dribbble icon with padding)
-[6.1]: http://i.imgur.com/0o48UoR.png (github.com/ihomeautomate)
+[6.1]: http://i.imgur.com/0o48UoR.png (github.com/Reality-Check-Inc)
 
 <!-- icons without padding -->
 
-[1.2]: http://i.imgur.com/wWzX9uB.png (twitter icon without padding)
 [2.2]: http://i.imgur.com/fep1WsG.png (facebook icon without padding)
 [3.2]: http://i.imgur.com/VlgBKQ9.png (google plus icon without padding)
 [4.2]: http://i.imgur.com/jDRp47c.png (tumblr icon without padding)
@@ -268,10 +262,7 @@ Code and documentation copyright 2014-2015 [iHomeAutomate](http://www.iHomeAutom
 <!-- links to your social media accounts -->
 <!-- update these accordingly -->
 
-[1]: http://twitter.com/ihomeautomate
-[2]: https://facebook.com/pages/iHomeAutomate/218034961586842
-[3]: https://plus.google.com/+IhomeautomateEu
-[6]: http://github.com/ihomeautomate
-[7]: https://github.com/pledbrook/lazybones/wiki/Template-developers-guide
+[2]: https://www.facebook.com/Reality-Check-Inc-128156693927849/
+[6]: http://github.com/Reality-Check-Inc
 
 <!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial --> 
