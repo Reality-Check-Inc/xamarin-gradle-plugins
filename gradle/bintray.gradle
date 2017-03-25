@@ -22,12 +22,12 @@ bintray {
         licenses = ['Apache-2.0']
         labels = ['C#', 'Mono', 'Xamarin', 'Gradle']
         publicDownloadNumbers = false
-        attributes= ['More info': 'http://www.reality.cm']
+        attributes= ['More info': project.project_vendor_more_info]
 
         version {
             name = attr 'version'
             vcsTag = attr 'version'
-            attributes = ['More info': 'http://www.reality.cm']
+            attributes = ['More info': project.project_vendor_more_info]
         }
     }
 }

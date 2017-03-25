@@ -42,8 +42,8 @@ publishing {
                 def dev = root.appendNode( 'developers' ).appendNode( 'developer' );
                 dev.appendNode( 'id', project.project_vendor )
                 dev.appendNode( 'name', project.project_vendor_name )
-                dev.appendNode( 'organization', 'Reality Check, Inc.' )
-                dev.appendNode( 'organizationUrl', 'http://www.reality.cm' )
+                dev.appendNode( 'organization', project.project_vendor_name )
+                dev.appendNode( 'organizationUrl', project.project_vendor_more_info )
             }
         }
     }
