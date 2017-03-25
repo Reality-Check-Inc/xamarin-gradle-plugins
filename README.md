@@ -138,7 +138,8 @@ The default configurations include Debug and Release, which will suit most proje
 
 dependencyDir can also be specified, and will define where downloaded dependencies get copied into
 
-*Example app configuration with all parameters:*
+*Example*  
+
     xamarin {
         androidAppProject {
             projectFile '../Project.csproj'
@@ -189,7 +190,7 @@ A typical Xamarin iOS library project will be configured like so:
 -- buildRelease
 - buildAll
 
-This is very similar to android projects, however instead of just project name, the solution file is required to be provided for mdtool to be able to build the project and its project dependencies.
+This is very similar to Android projects, however instead of just project name, the solution file is required to be provided for mdtool to be able to build the project and its project dependencies.
 For app projects, an ipa will be built if specified in the Xamarin project settings for the built configuration.
 
 ## Generic Projects
