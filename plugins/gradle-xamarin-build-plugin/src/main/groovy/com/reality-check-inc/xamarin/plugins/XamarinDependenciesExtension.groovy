@@ -1,4 +1,4 @@
-package au.org.trogdor.xamarin.plugins
+package com.reality_check_inc.xamarin.plugins
 
 import org.gradle.api.Project
 import org.gradle.api.artifacts.dsl.DependencyHandler

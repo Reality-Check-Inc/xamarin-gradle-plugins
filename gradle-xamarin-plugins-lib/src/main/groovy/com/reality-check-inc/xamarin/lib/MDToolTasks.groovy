@@ -1,4 +1,4 @@
-package au.org.trogdor.xamarin.lib
+package com.reality_check_inc.xamarin.lib
 
 import org.gradle.api.ProjectConfigurationException
 import org.gradle.api.tasks.TaskAction
