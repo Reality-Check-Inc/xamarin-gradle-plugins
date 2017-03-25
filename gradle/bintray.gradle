@@ -14,20 +14,21 @@ bintray {
     publish = false
     pkg {
         repo = 'Gradle-Plugins'
+        userOrg = 'reality-check-inc'
         name = 'xamarin-gradle-plugins'
-        desc = 'Plugins to build xamarin apps using gradle'
         websiteUrl = attr 'project_url'
         issueTrackerUrl = attr 'project_issues_url'
+        desc = 'Plugins to build Xamarin apps using Gradle'
         vcsUrl = 'https://github.com/Reality-Check-Inc/xamarin-gradle-plugins.git'
         licenses = ['Apache-2.0']
         labels = ['C#', 'Mono', 'Xamarin', 'Gradle']
         publicDownloadNumbers = false
-        attributes= ['More info': 'http://www.reality.cm']
+        attributes= ['More info': project.project_vendor_more_info]
 
         version {
             name = attr 'version'
             vcsTag = attr 'version'
-            attributes = ['More info': 'http://www.reality.cm']
+            attributes = ['More info': project.project_vendor_more_info]
         }
     }
 }

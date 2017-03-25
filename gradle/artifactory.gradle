@@ -9,11 +9,11 @@ artifactory {
             repoKey = 'oss-snapshot-local'
             username = bintrayUser
             password = bintrayKey
-            maven = true
+            // maven = true
         }
         defaults {
             publications ('mavenJava')
-            properties = ['moreinfo': 'http://www.reality.cm']
+            properties = ['moreinfo': project.project_vendor_more_info]
         }
     }
     resolve {
@@ -21,7 +21,7 @@ artifactory {
             repoKey = 'libs-snapshot' // or libs-release
             username = bintrayUser
             password = bintrayKey
-            maven = true
+            // maven = true
 
         }
     }
