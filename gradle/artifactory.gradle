@@ -7,8 +7,8 @@ artifactory {
     publish {
         repository {
             repoKey = 'oss-snapshot-local'
-            username = BINTRAY_USER
-            password = BINTRAY_KEY
+            username = bintrayUser
+            password = bintrayKey
             // maven = true
         }
         defaults {
@@ -19,8 +19,8 @@ artifactory {
     resolve {
         repository {
             repoKey = 'libs-snapshot' // or libs-release
-            username = BINTRAY_USER
-            password = BINTRAY_KEY
+            username = bintrayUser
+            password = bintrayKey
             // maven = true
 
         }

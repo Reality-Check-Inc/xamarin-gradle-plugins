@@ -5,8 +5,8 @@ apply plugin: 'com.jfrog.bintray'
 def attr = { String name -> project."$name" }
 
 bintray {
-    user = BINTRAY_USER
-    key = BINTRAY_KEY
+    user = bintrayUser
+    key = bintrayKey
 
     publications = ['mavenJava']
 
