@@ -1,5 +1,5 @@
 group = 'com.reality-check-inc'
-version = currentVersion
+version = project.version
 
 buildscript {
     repositories {
@@ -12,6 +12,10 @@ buildscript {
     }
 }
 
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: "com.jfrog.bintray"
+
 allprojects {
     apply from: rootProject.file('gradle/compile.gradle')
     apply from: rootProject.file('gradle/credentials.gradle')
@@ -19,4 +23,14 @@ allprojects {
 
 task wrapper(type: Wrapper) {
     gradleVersion = '3.3'
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "https://api.bintray.com/content/reality-check-inc/xamarin-gradle-plugins") {
+                authentication(userName: BINTRAY_USER, password: BINTRAY_KEY)
+            }
+        }
+    }
 }

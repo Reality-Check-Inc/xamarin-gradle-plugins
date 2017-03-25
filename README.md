@@ -3,7 +3,7 @@ xamarin-gradle-plugins
 
 [![Build Status](https://travis-ci.org/Reality-Check-Inc/xamarin-gradle-plugins.png?branch=master)](https://travis-ci.org/Reality-Check-Inc/xamarin-gradle-plugins)
 
-Plugins to integrate Xamarin mobile apps into gradle and maven, forked from [ihomeautomate/xamarin-gradle-plugins](https://github.com/ihomeautomate/xamarin-gradle-plugins).
+Plugins to integrate Xamarin mobile apps into Gradle and Maven, forked from [ihomeautomate/xamarin-gradle-plugins](https://github.com/ihomeautomate/xamarin-gradle-plugins).
 
 - xamarin-build: Allows you to build existing Xamarin.Android (compile and apk), Xamarin.iOS, and vanilla Xamarin projects by invoking builds against the .csproj/.sln files.
   Provides support for fetching dependencies under the 'references' configuration.
@@ -22,13 +22,13 @@ Apply the plugins like such:
             jcenter()
         }
         dependencies {
-            classpath 'eu.ihomeautomate.gradle:gradle-xamarin-build-plugin:1.0.0'
-            classpath 'eu.ihomeautomate.gradle:gradle-xamarin-publish-plugin:1.0.0'
+            classpath 'com.reality-check-inc.gradle:gradle-xamarin-build-plugin:1.0.0'
+            classpath 'com.reality-check-inc.gradle:gradle-xamarin-publish-plugin:1.0.0'
         }
     }
 
-    apply plugin: 'eu.ihomeautomate.gradle.xamarin-build'
-    apply plugin: 'eu.ihomeautomate.gradle.xamarin-publish'
+    apply plugin: 'com.reality-check-inc.gradle.xamarin-build'
+    apply plugin: 'com.reality-check-inc.gradle.xamarin-publish'
 
 ## Using the build plugin
 This plugin must be configured with enough information to invoke the xamarin build tools against your project's .csproj/.sln files in the correct build configuration.
