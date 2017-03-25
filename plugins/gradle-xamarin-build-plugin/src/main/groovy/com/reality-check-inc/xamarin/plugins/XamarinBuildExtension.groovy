@@ -1,14 +1,14 @@
-package au.org.trogdor.xamarin.plugins
+package com.reality_check_inc.xamarin.plugins
 
-import au.org.trogdor.xamarin.lib.AndroidAppProject
-import au.org.trogdor.xamarin.lib.AndroidLibraryProject
-import au.org.trogdor.xamarin.lib.GenericAppProject
-import au.org.trogdor.xamarin.lib.GenericLibraryProject
-import au.org.trogdor.xamarin.lib.MDToolProject
-import au.org.trogdor.xamarin.lib.XBuildProject
-import au.org.trogdor.xamarin.lib.XamarinProject
-import au.org.trogdor.xamarin.lib.iOSAppProject
-import au.org.trogdor.xamarin.lib.iOSLibraryProject
+import com.reality_check_inc.xamarin.lib.AndroidAppProject
+import com.reality_check_inc.xamarin.lib.AndroidLibraryProject
+import com.reality_check_inc.xamarin.lib.GenericAppProject
+import com.reality_check_inc.xamarin.lib.GenericLibraryProject
+import com.reality_check_inc.xamarin.lib.MDToolProject
+import com.reality_check_inc.xamarin.lib.XBuildProject
+import com.reality_check_inc.xamarin.lib.XamarinProject
+import com.reality_check_inc.xamarin.lib.iOSAppProject
+import com.reality_check_inc.xamarin.lib.iOSLibraryProject
 import org.gradle.api.Project
 
 /**
@@ -27,7 +27,7 @@ class XamarinBuildExtension {
 
     private def setProject(XamarinProject xprj, Closure closure) {
         if (this.mXamarinProject != null)
-            throw new Exception("You may only define one Xamarin project per Gradle project!")
+            throw new Exception("You must only define one Xamarin project per Gradle project!")
 
         project.configure(xprj, closure)
         this.mXamarinProject = xprj

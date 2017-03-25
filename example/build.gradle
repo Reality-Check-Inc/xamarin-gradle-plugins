@@ -2,16 +2,17 @@ subprojects {
 	buildscript {
 		repositories {
 			mavenLocal()
+	        jcenter()
 		}
 
 		dependencies {
-	        classpath 'eu.ihomeautomate.gradle:gradle-xamarin-build-plugin:+'
-	        classpath 'eu.ihomeautomate.gradle:gradle-xamarin-publish-plugin:+'
+        	classpath 'com.reality-check-inc.gradle:gradle-xamarin-build-plugin:1.0.0'
+        	classpath 'com.reality-check-inc.gradle:gradle-xamarin-publish-plugin:1.0.0'
 		}
 	}
 
-	version = '1.0'
-	group = 'XamarinGradlePlugin'
+	version = '1.0.0'
+	group = 'com.reality-check-inc'
 
 	repositories {
 		mavenLocal()

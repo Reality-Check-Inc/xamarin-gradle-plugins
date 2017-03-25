@@ -7,18 +7,18 @@ Plugins to integrate Xamarin mobile apps into Gradle and Maven, forked from [iho
 
 - xamarin-build: Allows you to build existing Xamarin.Android (compile and apk), Xamarin.iOS, and vanilla Xamarin projects by invoking builds against the .csproj/.sln files.
   Provides support for fetching dependencies under the 'references' configuration.
-- xamarin-publish (optional): Adds configuration and tasks to publish a project configured with the build plugin to maven, eusing the maven-publish plugin.
+- xamarin-publish (optional): Adds configuration and tasks to publish a project configured with the build plugin to maven, using the maven-publish plugin.
 
 Using these plugins in tandem will allow you to integrate Maven dependency management into your Xamarin projects for more modular builds.
 
-
-The plugins can be installed into the local maven repository with "gradle install"
+The plugins can be installed into the local maven repository with "gradle publishToMavenLocal"
 
 ## Applying the plugins
-Apply the plugins like such:
+In the top level build.gradle, add the following:
 
     buildscript {
         repositories {
+			mavenLocal()
             jcenter()
         }
         dependencies {
@@ -27,7 +27,7 @@ Apply the plugins like such:
         }
     }
 
-    apply plugin: 'com.reality-check-inc.gradle.xamarin-build'
+	apply plugin: 'com.reality-check-inc.gradle.xamarin-build'
     apply plugin: 'com.reality-check-inc.gradle.xamarin-publish'
 
 ## Using the build plugin
@@ -35,6 +35,7 @@ This plugin must be configured with enough information to invoke the xamarin bui
 All configuration for the build plugin is done under the 'xamarin' project extension.
 
 A project block must be specified in the xamarin closure. Available project types are:
+
 - androidAppProject
 - iOSAppProject
 - genericAppProject
@@ -43,8 +44,8 @@ A project block must be specified in the xamarin closure. Available project type
 - genericLibraryProject
 
 
-## Customising tool paths
-The block can optionally be configured with xbuildPath and mdtoolpath.
+## Customizing tool paths
+The block can be optionally configured with xbuildPath and mdtoolpath.
 These default to 'xbuild' and '/Applications/Xamarin Studio.app/Contents/MacOS/mdtool' respectively, and will suit standard Xamarin installs.
 
 *Example:*
@@ -57,9 +58,9 @@ These default to 'xbuild' and '/Applications/Xamarin Studio.app/Contents/MacOS/m
         }
     }
 
-## Customising tool paths (Windows)
+## Customizing tool paths (Windows)
 We've successfully tested compilation with the build plugin when installing [mono for Windows](http://www.mono-project.com/download/#download-win). 
-Customise `xbuildPath` pointing to `xbuild.bat` in the bin folder of your installed mono version.
+Change `xbuildPath` to point to `xbuild.bat` in the bin folder of your installed mono version.
 
 *Example:*
 
@@ -68,11 +69,9 @@ Customise `xbuildPath` pointing to `xbuild.bat` in the bin folder of your instal
     }
 
 ## Dependencies
-The 'references' configuration is added by the build plugin. DLL's which have been packaged as maven artifacts can be used here,
-and will be copied into a 'dependencies' (by default) folder with the 'installDependencies\<configuration\>' task, which also runs before build steps.
+The 'references' configuration is added by the build plugin. DLL's which have been packaged as maven artifacts can be used here, and will be copied into a 'dependencies' (by default) folder with the 'installDependencies\<configuration\>' task, which also runs before build steps.
 
-The 'referencesMatched' configuration may also be used, which will use the correct maven classifier for your compiled configuration.
-This is useful when used for library published with the xamarin-publishing-plugin, which published all configurations of a dll under classifiers named after the configuration.
+The 'referencesMatched' configuration may also be used, which will use the correct maven classifier for your compiled configuration.  This is useful when used for library published with the xamarin-publishing-plugin, which published all configurations of a dll under classifiers named after the configuration.
 
 You can use 'xamarin.referenceProject(projectPath)' to form a transitive dependency link to another gradle xamarin project, and all the dependent project's dependency dlls will be installed into this project.
 

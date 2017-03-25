@@ -1,6 +1,6 @@
-package au.org.trogdor.xamarin.plugins
+package com.reality_check_inc.xamarin.plugins
 
-import au.org.trogdor.xamarin.lib.XamarinProject
+import com.reality_check_inc.xamarin.lib.XamarinProject
 import org.gradle.api.Action
 import org.gradle.api.Project
 import org.gradle.api.Plugin

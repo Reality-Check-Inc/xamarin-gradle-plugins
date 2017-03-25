@@ -1,4 +1,4 @@
-package au.org.trogdor.xamarin.lib
+package com.reality_check_inc.xamarin.lib
 
 import groovy.transform.InheritConstructors
 import org.gradle.api.Project
